@@ -181,15 +181,22 @@ section{padding:82px 0}
 .darkband .ruleitem{border-color:rgba(255,255,255,.18)}
 .darkband .ruleitem .code{color:#badfe5}
 .darkband .ruleitem p{color:#c8d5da}
-.process{
-  margin-top:42px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.28);border-left:1px solid rgba(255,255,255,.28)
-}
-.process .step{
-  min-height:235px;padding:26px;border-right:1px solid rgba(255,255,255,.28);border-bottom:1px solid rgba(255,255,255,.28)
-}
-.process .step .n{font-family:Georgia,serif;font-size:34px;color:#a7d9dc}
-.process .step h3{font-size:20px;margin:45px 0 10px}
-.process .step p{font-size:14px;color:#cbd8dc;margin:0}
+.chain-logic{margin-top:30px;display:flex;gap:10px;flex-wrap:wrap}
+.chain-logic span{display:inline-block;border:1px solid rgba(255,255,255,.36);padding:9px 12px;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#e5f0f2}
+.chain-note{margin-top:18px;padding:16px 18px;border-left:4px solid var(--gold);background:rgba(255,255,255,.08);color:#d9e4e7;font-size:14px}
+.process{margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.24);border:1px solid rgba(255,255,255,.24)}
+.process .step{min-height:300px;padding:22px 21px 20px;background:#fff;position:relative}
+.process .step .topline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.process .step .n{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-family:Georgia,serif;font-size:20px}
+.process .step .phase{font-size:10px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--blue)}
+.darkband .process .step h3{color:var(--ink);font-family:Georgia,serif;font-size:23px;line-height:1.15;font-weight:500;margin:24px 0 10px}
+.darkband .process .step p{font-size:14px;line-height:1.5;color:var(--muted);margin:0}
+.process .step .proof{margin-top:16px;padding-top:13px;border-top:1px solid var(--rule);font-size:11px;font-weight:700;line-height:1.4;color:var(--blue2)}
+.process .step .proof.deny{color:#8a3c34}
+.chain-cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.chain-cta .btn{border-color:#fff;color:#fff;background:transparent}
+.chain-cta .btn.primary{background:#fff;color:var(--ink)}
+.chain-foot{margin-top:22px;font-size:13px;color:#c8d5da;max-width:900px}
 .legal-grid{
   margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px
 }
@@ -319,7 +326,7 @@ footer a{display:block;margin:6px 0}
 <nav class="mainnav" aria-label="Huvudnavigation">
   <div class="inner">
     <a href="#standard">Standarden</a>
-    <a href="#process">Certifieringsprocess</a>
+    <a href="#process">Så fungerar det</a>
     <a href="certifieringspilot.html">Certifieringspilot</a>
     <a href="#regelverk">Regelverk</a>
     <a href="#bransch">För film & TV</a>
@@ -336,7 +343,7 @@ footer a{display:block;margin:6px 0}
       <div class="label">Standardutveckling · AI & rörlig bild</div>
       <h1>Rättigheter som följer människan.</h1>
       <p class="lead">En föreslagen branschstandard för verifierbart samtycke, projektbundna rättigheter och spårbar AI-användning i film, tv och rörligt material.</p>
-      <p class="deck">AI Twin Rights ska ge medverkande kontroll över sin digitala identitet och ge producenter, beställare och publicister ett tydligt underlag för vad som faktiskt är tillåtet — före publicering och återanvändning.</p>
+      <p class="deck">AI Twin Rights ska ge medverkande kontroll över sin digitala identitet och ge producenter, AI/VFX-leverantörer, beställare och publicister ett tydligt underlag för vad som faktiskt är tillåtet — från första begäran till publicering och eventuell återanvändning.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#standard">Läs om standardförslaget →</a>
         <a class="btn" href="certifieringspilot.html">Testa certifieringspilot v4.1</a>
@@ -359,7 +366,7 @@ footer a{display:block;margin:6px 0}
       <strong>På den här sidan</strong>
       <div class="links">
         <a href="#standard">Vad standarden ska lösa</a>
-        <a href="#process">Så fungerar certifieringen</a>
+        <a href="#process">12 steg från människa till publicering</a>
         <a href="#regelverk">Lagar och referensram</a>
         <a href="#bransch">Aktörer i branschen</a>
         <a href="certifieringspilot.html">Testa certifieringspilot v4.1</a>
@@ -368,9 +375,53 @@ footer a{display:block;margin:6px 0}
     </div>
   </div>
 
+  <section class="darkband" id="process">
+    <div class="wrap section-grid">
+      <div class="side-label">01 · Så fungerar det</div>
+      <div class="section-main">
+        <h2>Från människa till publicering – en verifierbar rättighetskedja.</h2>
+        <p class="intro">Tolv tydliga kontrollpunkter visar vem som har sagt ja, till vad, för vilken produktion och om den begärda AI-användningen fortfarande är giltig när materialet faktiskt ska bearbetas och publiceras.</p>
+
+        <div class="chain-logic">
+          <span>WHO · verifierad person</span>
+          <span>WHAT · identifierad AI Twin</span>
+          <span>RIGHT · avgränsad rättighet</span>
+          <span>VERSION · exakt handling</span>
+          <span>OPERATION · tillåten AI-användning</span>
+          <span>PROOF · verifierbar logg</span>
+        </div>
+
+        <div class="chain-note"><strong>Kärnprincip:</strong> Teknisk tillgång är inte samma sak som juridisk rätt. I pilotmodellen gäller därför: <strong>No certificate – no reuse.</strong></div>
+
+        <div class="process">
+          <div class="step"><div class="topline"><div class="n">1</div><div class="phase">Uppdrag</div></div><h3>Producenten beskriver användningen</h3><p>Produktion, scen, ändamål, medier, territorium, tidsperiod, ersättning, leverantör och exakt AI/VFX-operation definieras innan någon rättighet begärs.</p><div class="proof">Output: Production Request + önskad scope</div></div>
+          <div class="step"><div class="topline"><div class="n">2</div><div class="phase">Identitet</div></div><h3>Rättighetshavaren identifierar sig</h3><p>BankID/e-legitimation kombineras i piloten med liveporträtt och giltigt pass eller nationellt ID. Känsliga underlag hålls separerade från den publika certifikatvyn.</p><div class="proof">Output: verifieringsstatus + tid + metod</div></div>
+          <div class="step"><div class="topline"><div class="n">3</div><div class="phase">Level 3</div></div><h3>Notariell verifiering vid högre säkerhetsnivå</h3><p>Vid känslig, internationell eller värdefull användning kan Notarius publicus vara ett förstärkt Root of Trust-lager för identitet, viljeförklaring och exakt handling.</p><div class="proof">Notarien intygar definierade fakta – inte “godkänner AI”.</div></div>
+          <div class="step"><div class="topline"><div class="n">4</div><div class="phase">AI Twin ID</div></div><h3>AI Twin Passport skapas</h3><p>Den digitala representationen kopplas till den verifierade personen och får ett unikt Twin ID. Passet identifierar replikan men ger ingen nyttjanderätt.</p><div class="proof">Output: AI Twin ID + versionsreferens</div></div>
+
+          <div class="step"><div class="topline"><div class="n">5</div><div class="phase">Samtycke</div></div><h3>Rights Manifest visas rad för rad</h3><p>Skådespelaren tar ställning JA/NEJ till exempelvis ansikte, kropp, röst, nya repliker, rörelser, dubbning, träning, reklam, återanvändning och tredje part.</p><div class="proof">Ej uttryckligen godkänt = utanför certifierad scope</div></div>
+          <div class="step"><div class="topline"><div class="n">6</div><div class="phase">Exakt version</div></div><h3>Avtalet låses och signeras</h3><p>Den exakta avtalsversionen får Document ID, SHA-256-hash och tidsreferens. Skådespelare och producent signerar samma avgränsade användning.</p><div class="proof">Output: signerad Digital Replica Authorization</div></div>
+          <div class="step"><div class="topline"><div class="n">7</div><div class="phase">Tillstånd</div></div><h3>Use Certificate + Use Token utfärdas</h3><p>Certifikatet anger produktion, AI Twin, giltighet och tillåtna operationer. En kortlivad signerad Use Token kan fungera som teknisk nyckel in i AI/VFX-flödet.</p><div class="proof">Output: Certificate ID + maskinläsbar tillåtelse</div></div>
+          <div class="step"><div class="topline"><div class="n">8</div><div class="phase">Kontroll</div></div><h3>Verify before processing</h3><p>Leverantören kontrollerar Twin ID, certifikatstatus, giltighet, produktion och begärd operation innan materialet får bearbetas.</p><div class="proof deny">Mismatch eller saknat tillstånd → PROCESS DENIED</div></div>
+
+          <div class="step"><div class="topline"><div class="n">9</div><div class="phase">AI/VFX</div></div><h3>Endast godkänd AI-användning sker</h3><p>AI/VFX-systemet får utföra de operationer som ligger inom aktiv token och certifierad scope – inte mer bara för att modellen eller filerna tekniskt går att använda.</p><div class="proof">Exempel: ansiktsersättning ALLOW · syntetisk dialog DENY</div></div>
+          <div class="step"><div class="topline"><div class="n">10</div><div class="phase">Audit trail</div></div><h3>Varje AI-operation loggas</h3><p>Ett AI Use Record sparar operation, tid, verktyg/modell, certifikatreferens och output-hash så att faktisk användning kan jämföras med det som godkänts.</p><div class="proof">Output: spårbar användningslogg</div></div>
+          <div class="step"><div class="topline"><div class="n">11</div><div class="phase">Leverans</div></div><h3>Materialet får provenance och leveranskontroll</h3><p>Slutmaterial kan bära C2PA/Content Credentials för provenance. AI Twin Rights-lagret visar samtidigt vem som hade rätt att godkänna användningen och vilken scope som gällde.</p><div class="proof">C2PA = proveniens · Certifikat = rättighetskedja</div></div>
+          <div class="step"><div class="topline"><div class="n">12</div><div class="phase">Publicering</div></div><h3>Status kan verifieras före publicering</h3><p>Beställare och andra behöriga kan kontrollera certifikatstatus. Den publika vyn visar bara nödvändiga uppgifter som VALID, EXPIRED, REVOKED eller SUPERSEDED.</p><div class="proof">Slutpunkt: Human Consent Certified</div></div>
+        </div>
+
+        <div class="chain-cta">
+          <a class="btn primary" href="certifieringspilot.html">Testa hela kedjan i certifieringspiloten →</a>
+          <a class="btn" href="#standard">Se vad rättighetslagren betyder</a>
+        </div>
+        <p class="chain-foot">Pilotstatus: BankID, ID-kontroll, notariell fjärrprocess, register, Use Token och C2PA-koppling visas som föreslagen målarkitektur/demo tills respektive integration, juridisk process och ansvarsfördelning har validerats för skarp drift.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="standard">
     <div class="wrap section-grid">
-      <div class="side-label">01 · Standardförslaget</div>
+      <div class="side-label">02 · Standardförslaget</div>
       <div class="section-main">
         <h2>Ett verifierbart rättighetslager mellan människa, produktion och publicering.</h2>
         <p class="intro">Teknisk tillgång till en människas digitala replika är inte samma sak som juridisk rätt att använda människan.</p>
@@ -405,25 +456,6 @@ footer a{display:block;margin:6px 0}
             <h3>Vad får användas?</h3>
             <p>Definierar exakt tillåten användning och skapar underlag för granskning inför leverans.</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="darkband" id="process">
-    <div class="wrap section-grid">
-      <div class="side-label">02 · Certifieringsprocess</div>
-      <div class="section-main">
-        <h2>Från samtycke till färdig leverans.</h2>
-        <p class="intro">Processen är utformad för att fungera i verklig film- och tv-produktion utan att göra rättighetskontrollen till ett separat universum.</p>
-
-        <div class="process">
-          <div class="step"><div class="n">1</div><h3>Beskriv användningen</h3><p>Producenten anger scen, sammanhang, distributionskanaler, tidsperiod och ansvariga leverantörer.</p></div>
-          <div class="step"><div class="n">2</div><h3>Informera personen</h3><p>Den medverkande får ett begripligt underlag, exempel, begränsningar och möjlighet att säga nej.</p></div>
-          <div class="step"><div class="n">3</div><h3>Verifiera godkännandet</h3><p>Identitet, avtalsversion, omfattning och tidpunkt dokumenteras. Uteblivet svar är inte ett godkännande.</p></div>
-          <div class="step"><div class="n">4</div><h3>Dokumentera produktionen</h3><p>Verktyg, leverantörer, material och relevanta ändringar versionshanteras.</p></div>
-          <div class="step"><div class="n">5</div><h3>Granska slutversionen</h3><p>En fristående granskare jämför faktisk AI-användning med det godkända underlaget.</p></div>
-          <div class="step"><div class="n">6</div><h3>Utfärda och kontrollera</h3><p>Ett versionsbundet certifikat ger beställaren en aktuell kontrollpunkt inför leverans och publicering.</p></div>
         </div>
       </div>
     </div>
