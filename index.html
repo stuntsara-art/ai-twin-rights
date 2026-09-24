@@ -343,7 +343,7 @@ footer a{display:block;margin:6px 0}
       <div class="label">Standardutveckling · AI & rörlig bild</div>
       <h1>Rättigheter som följer människan.</h1>
       <p class="lead">En föreslagen branschstandard för verifierbart samtycke, projektbundna rättigheter och spårbar AI-användning i film, tv och rörligt material.</p>
-      <p class="deck">AI Twin Rights ska ge medverkande kontroll över sin digitala identitet och ge producenter, AI/VFX-leverantörer, beställare och publicister ett tydligt underlag för vad som faktiskt är tillåtet — från första begäran till publicering och eventuell återanvändning.</p>
+      <p class="deck">AI Twin Rights skiljer på två saker: att en verifierad skådespelare finns registrerad och sökbar för AI-roller, och att en producent har rätt att använda personens digitala replika i en specifik produktion. Ett AI Twin Passport ger ingen produktionsrätt i sig.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#standard">Läs om standardförslaget →</a>
         <a class="btn" href="certifieringspilot.html">Testa certifieringspilot v4.1</a>
@@ -379,42 +379,56 @@ footer a{display:block;margin:6px 0}
     <div class="wrap section-grid">
       <div class="side-label">01 · Så fungerar det</div>
       <div class="section-main">
-        <h2>Från människa till publicering – en verifierbar rättighetskedja.</h2>
-        <p class="intro">Tolv tydliga kontrollpunkter visar vem som har sagt ja, till vad, för vilken produktion och om den begärda AI-användningen fortfarande är giltig när materialet faktiskt ska bearbetas och publiceras.</p>
+        <h2>Två rättigheter. En sammanhängande kedja.</h2>
+        <p class="intro">Först verifieras människan och hennes AI Twin Passport i agenturens register. Därefter krävs ett separat, specifikt avtal varje gång en producent faktiskt vill använda den digitala replikan i en film, scen eller annan produktion.</p>
 
         <div class="chain-logic">
-          <span>WHO · verifierad person</span>
-          <span>WHAT · identifierad AI Twin</span>
-          <span>RIGHT · avgränsad rättighet</span>
-          <span>VERSION · exakt handling</span>
-          <span>OPERATION · tillåten AI-användning</span>
-          <span>PROOF · verifierbar logg</span>
+          <span>PASS 1 · IDENTITET & CASTING</span>
+          <span>PASS 2 · PRODUKTIONSRÄTT</span>
+          <span>PASS 3 · KONTROLL & SPÅRBARHET</span>
         </div>
 
-        <div class="chain-note"><strong>Kärnprincip:</strong> Teknisk tillgång är inte samma sak som juridisk rätt. I pilotmodellen gäller därför: <strong>No certificate – no reuse.</strong></div>
+        <div class="chain-note">
+          <strong>Viktig separation:</strong> AI Twin Passport betyder <strong>verifierad identitet + aktiv castingstatus</strong>. 
+          AI Twin Use Certificate betyder <strong>verifierad rätt att använda personen i en specifik produktion</strong>. 
+          Att finnas i databasen är alltså aldrig ett generellt ja till användning.
+        </div>
 
         <div class="process">
-          <div class="step"><div class="topline"><div class="n">1</div><div class="phase">Uppdrag</div></div><h3>Producenten beskriver användningen</h3><p>Produktion, scen, ändamål, medier, territorium, tidsperiod, ersättning, leverantör och exakt AI/VFX-operation definieras innan någon rättighet begärs.</p><div class="proof">Output: Production Request + önskad scope</div></div>
-          <div class="step"><div class="topline"><div class="n">2</div><div class="phase">Identitet</div></div><h3>Rättighetshavaren identifierar sig</h3><p>BankID/e-legitimation kombineras i piloten med liveporträtt och giltigt pass eller nationellt ID. Känsliga underlag hålls separerade från den publika certifikatvyn.</p><div class="proof">Output: verifieringsstatus + tid + metod</div></div>
-          <div class="step"><div class="topline"><div class="n">3</div><div class="phase">Level 3</div></div><h3>Notariell verifiering vid högre säkerhetsnivå</h3><p>Vid känslig, internationell eller värdefull användning kan Notarius publicus vara ett förstärkt Root of Trust-lager för identitet, viljeförklaring och exakt handling.</p><div class="proof">Notarien intygar definierade fakta – inte “godkänner AI”.</div></div>
-          <div class="step"><div class="topline"><div class="n">4</div><div class="phase">AI Twin ID</div></div><h3>AI Twin Passport skapas</h3><p>Den digitala representationen kopplas till den verifierade personen och får ett unikt Twin ID. Passet identifierar replikan men ger ingen nyttjanderätt.</p><div class="proof">Output: AI Twin ID + versionsreferens</div></div>
+          <div class="step"><div class="topline"><div class="n">1</div><div class="phase">Agentur</div></div><h3>Skådespelaren registrerar sig</h3><p>Personen anmäler att hen vill finnas som aktiv och sökbar för AI-relaterade roller hos en specifik agentur eller castingaktör.</p><div class="proof">Output: Registry Enrollment</div></div>
 
-          <div class="step"><div class="topline"><div class="n">5</div><div class="phase">Samtycke</div></div><h3>Rights Manifest visas rad för rad</h3><p>Skådespelaren tar ställning JA/NEJ till exempelvis ansikte, kropp, röst, nya repliker, rörelser, dubbning, träning, reklam, återanvändning och tredje part.</p><div class="proof">Ej uttryckligen godkänt = utanför certifierad scope</div></div>
-          <div class="step"><div class="topline"><div class="n">6</div><div class="phase">Exakt version</div></div><h3>Avtalet låses och signeras</h3><p>Den exakta avtalsversionen får Document ID, SHA-256-hash och tidsreferens. Skådespelare och producent signerar samma avgränsade användning.</p><div class="proof">Output: signerad Digital Replica Authorization</div></div>
-          <div class="step"><div class="topline"><div class="n">7</div><div class="phase">Tillstånd</div></div><h3>Use Certificate + Use Token utfärdas</h3><p>Certifikatet anger produktion, AI Twin, giltighet och tillåtna operationer. En kortlivad signerad Use Token kan fungera som teknisk nyckel in i AI/VFX-flödet.</p><div class="proof">Output: Certificate ID + maskinläsbar tillåtelse</div></div>
-          <div class="step"><div class="topline"><div class="n">8</div><div class="phase">Kontroll</div></div><h3>Verify before processing</h3><p>Leverantören kontrollerar Twin ID, certifikatstatus, giltighet, produktion och begärd operation innan materialet får bearbetas.</p><div class="proof deny">Mismatch eller saknat tillstånd → PROCESS DENIED</div></div>
+          <div class="step"><div class="topline"><div class="n">2</div><div class="phase">Identitet</div></div><h3>Identiteten verifieras</h3><p>BankID/e-legitimation kombineras i pilotmodellen med liveporträtt och giltigt pass eller nationellt ID. Känsliga underlag hålls i privat Evidence Vault.</p><div class="proof">Output: verifierad person + tid + metod</div></div>
 
-          <div class="step"><div class="topline"><div class="n">9</div><div class="phase">AI/VFX</div></div><h3>Endast godkänd AI-användning sker</h3><p>AI/VFX-systemet får utföra de operationer som ligger inom aktiv token och certifierad scope – inte mer bara för att modellen eller filerna tekniskt går att använda.</p><div class="proof">Exempel: ansiktsersättning ALLOW · syntetisk dialog DENY</div></div>
-          <div class="step"><div class="topline"><div class="n">10</div><div class="phase">Audit trail</div></div><h3>Varje AI-operation loggas</h3><p>Ett AI Use Record sparar operation, tid, verktyg/modell, certifikatreferens och output-hash så att faktisk användning kan jämföras med det som godkänts.</p><div class="proof">Output: spårbar användningslogg</div></div>
-          <div class="step"><div class="topline"><div class="n">11</div><div class="phase">Leverans</div></div><h3>Materialet får provenance och leveranskontroll</h3><p>Slutmaterial kan bära C2PA/Content Credentials för provenance. AI Twin Rights-lagret visar samtidigt vem som hade rätt att godkänna användningen och vilken scope som gällde.</p><div class="proof">C2PA = proveniens · Certifikat = rättighetskedja</div></div>
-          <div class="step"><div class="topline"><div class="n">12</div><div class="phase">Publicering</div></div><h3>Status kan verifieras före publicering</h3><p>Beställare och andra behöriga kan kontrollera certifikatstatus. Den publika vyn visar bara nödvändiga uppgifter som VALID, EXPIRED, REVOKED eller SUPERSEDED.</p><div class="proof">Slutpunkt: Human Consent Certified</div></div>
+          <div class="step"><div class="topline"><div class="n">3</div><div class="phase">Samtycke till register</div></div><h3>Registry Declaration signeras</h3><p>Skådespelaren godkänner att den egna digitala replikan registreras hos agenturen och får användas för sökning, matchning och castingförfrågningar – inte för produktion.</p><div class="proof">Output: signerad registerförklaring</div></div>
+
+          <div class="step"><div class="topline"><div class="n">4</div><div class="phase">Notarial Root</div></div><h3>Notarius publicus kan styrka registreringen</h3><p>På hög säkerhetsnivå kan notarien styrka identitet, underskrift/viljeförklaring och vilken exakt handling som signerats. Notarien behöver inte delta i varje senare produktion.</p><div class="proof">Output: notariell attestering av registreringshandlingen</div></div>
+
+          <div class="step"><div class="topline"><div class="n">5</div><div class="phase">AI Twin Passport</div></div><h3>AI Twin Passport blir ACTIVE</h3><p>Personen och den digitala representationen kopplas till ett unikt Twin ID. Profilen kan nu visas som verifierad och aktiv för casting hos den aktuella agenturen.</p><div class="proof">Ingen produktionslicens finns ännu</div></div>
+
+          <div class="step"><div class="topline"><div class="n">6</div><div class="phase">Casting</div></div><h3>Agenturen matchar mot produktioner</h3><p>Producenter kan hitta verifierade AI Twin-profiler utifrån exempelvis roll, utseende, röst, språk och vilka typer av AI-arbete personen är öppen för att förhandla om.</p><div class="proof">“Tillgänglig för förfrågan” ≠ “förhandslicensierad”</div></div>
+
+          <div class="step"><div class="topline"><div class="n">7</div><div class="phase">Förfrågan</div></div><h3>Producenten skickar Production Use Request</h3><p>Producenten beskriver exakt produktion, scen, ändamål, medier, territorium, tidsperiod, ersättning, leverantör och vilken AI/VFX-användning som önskas.</p><div class="proof">Output: specifik nyttjandeförfrågan</div></div>
+
+          <div class="step"><div class="topline"><div class="n">8</div><div class="phase">Rights Matrix</div></div><h3>Skådespelaren väljer JA eller NEJ punkt för punkt</h3><p>Ansikte, kropp, röst, syntetisk dialog, rörelser, dubbning, åldersförändring, modellträning, trailer, reklam, återanvändning, ny säsong och tredje part kan godkännas eller nekas separat.</p><div class="proof">Ej uttryckligen godkänt = utanför scope</div></div>
+
+          <div class="step"><div class="topline"><div class="n">9</div><div class="phase">Avtal</div></div><h3>Producent och skådespelare signerar produktionsavtalet</h3><p>Ett vanligt skriftligt eller e-signerat avtal kan användas för just denna produktion, med exakt omfattning, ersättning och rättighetsmatris. Dokumentversion och hash kan låsas för spårbarhet.</p><div class="proof">Normalfallet kräver inte ny notariell förrättning</div></div>
+
+          <div class="step"><div class="topline"><div class="n">10</div><div class="phase">Use Certificate</div></div><h3>AI Twin Use Certificate utfärdas</h3><p>Certifikatet kopplar AI Twin ID till den specifika produktionen och visar exakt vilka operationer som är tillåtna, giltighetstid och eventuell begränsning av återanvändning.</p><div class="proof">Output: Certificate ID + tillåten scope</div></div>
+
+          <div class="step"><div class="topline"><div class="n">11</div><div class="phase">AI/VFX</div></div><h3>Verify before processing</h3><p>AI/VFX-leverantören kontrollerar certifikat, produktion, Twin ID, giltighet och begärd operation innan bearbetning. Faktisk användning kan loggas i ett AI Use Record.</p><div class="proof deny">Mismatch eller saknat tillstånd → PROCESS DENIED</div></div>
+
+          <div class="step"><div class="topline"><div class="n">12</div><div class="phase">Publicering</div></div><h3>Leverans och status kan verifieras</h3><p>Beställare kan kontrollera att användningen ligger inom certifikatet. Provenance kan kompletteras med C2PA/Content Credentials och den publika vyn visar bara nödvändig statusinformation.</p><div class="proof">Slutpunkt: Human Consent Certified</div></div>
+        </div>
+
+        <div class="chain-note" style="margin-top:26px">
+          <strong>Högriskfall:</strong> För särskilt känsliga, internationella, långvariga eller ekonomiskt betydande licenser kan ett extra notariellt lager läggas även på produktionsavtalet. Det är ett tillval ovanpå normalflödet – inte en flaskhals i varje casting.
         </div>
 
         <div class="chain-cta">
-          <a class="btn primary" href="certifieringspilot.html">Testa hela kedjan i certifieringspiloten →</a>
-          <a class="btn" href="#standard">Se vad rättighetslagren betyder</a>
+          <a class="btn primary" href="certifieringspilot.html">Testa produktionsflödet i certifieringspiloten →</a>
+          <a class="btn" href="#standard">Se skillnaden mellan Passport och Use Certificate</a>
         </div>
-        <p class="chain-foot">Pilotstatus: BankID, ID-kontroll, notariell fjärrprocess, register, Use Token och C2PA-koppling visas som föreslagen målarkitektur/demo tills respektive integration, juridisk process och ansvarsfördelning har validerats för skarp drift.</p>
+        <p class="chain-foot">Pilotstatus: Identitetskontroll, notariell fjärrprocess, registry, Use Certificate, teknisk kontroll och C2PA-koppling är delar av en föreslagen modell och behöver valideras juridiskt, tekniskt och operativt innan skarp drift.</p>
       </div>
     </div>
   </section>
@@ -423,8 +437,8 @@ footer a{display:block;margin:6px 0}
     <div class="wrap section-grid">
       <div class="side-label">02 · Standardförslaget</div>
       <div class="section-main">
-        <h2>Ett verifierbart rättighetslager mellan människa, produktion och publicering.</h2>
-        <p class="intro">Teknisk tillgång till en människas digitala replika är inte samma sak som juridisk rätt att använda människan.</p>
+        <h2>AI Twin Passport och Use Certificate gör två olika jobb.</h2>
+        <p class="intro">Passportet visar vem personen är och att AI Twin-profilen är verifierad och aktiv för casting. Use Certificate visar vad en viss producent faktiskt har rätt att göra i en bestämd produktion.</p>
 
         <div class="rulelist">
           <div class="ruleitem">
@@ -437,7 +451,7 @@ footer a{display:block;margin:6px 0}
           </div>
           <div class="ruleitem">
             <div class="code">ATR 03</div>
-            <div><h3>Separata tillstånd</h3><p>Rätten att skapa en replika, använda den i en produktion, träna en modell eller återanvända material behandlas som skilda beslut.</p></div>
+            <div><h3>Separera registersamtycke från produktionssamtycke</h3><p>Samtycke till att finnas sökbar i ett agenturregister ska inte tolkas som samtycke till filmproduktion. Varje faktisk användning kräver en ny, specifik rättighetsprövning.</p></div>
           </div>
           <div class="ruleitem">
             <div class="code">ATR 04</div>
@@ -449,14 +463,19 @@ footer a{display:block;margin:6px 0}
           <div>
             <small>AI Twin Passport</small>
             <h3>Vem och vilken replika?</h3>
-            <p>Identifierar personen, den aktuella replikan och relevanta versionsuppgifter.</p>
+            <p>Identifierar personen och den aktuella replikan och kan visa ACTIVE castingstatus hos en specificerad agentur. Det ger ingen rätt att använda ansikte, röst, kropp eller prestation i en produktion.</p>
           </div>
           <div>
             <small>Use Certificate</small>
             <h3>Vad får användas?</h3>
-            <p>Definierar exakt tillåten användning och skapar underlag för granskning inför leverans.</p>
+            <p>Skapas först efter en konkret produktionsförfrågan och ett specifikt avtal mellan producent och skådespelare. Definierar exakt tillåten användning, giltighet och begränsningar.</p>
           </div>
-        </div>
+
+
+        <div class="notice"><strong>Två separata rättshandlingar:</strong><br>
+        <strong>1. Registry Declaration:</strong> ”Jag vill vara verifierad och sökbar för AI-roller hos agentur X.”<br>
+        <strong>2. Production Use Agreement:</strong> ”Jag godkänner exakt denna användning i produktion Y, enligt den här rättighetsmatrisen.”<br><br>
+        Det första öppnar dörren för casting. Det andra öppnar dörren för användning.</div>        </div>
       </div>
     </div>
   </section>
@@ -605,7 +624,7 @@ footer a{display:block;margin:6px 0}
       <div>
         <h3>Snabblänkar</h3>
         <a href="#standard">Standarden</a>
-        <a href="#process">Certifieringsprocess</a>
+        <a href="#process">Så fungerar det</a>
     <a href="certifieringspilot.html">Certifieringspilot</a>
         <a href="#regelverk">Regelverk</a>
         <a href="certifieringspilot.html">Certifieringspilot</a>
