@@ -343,10 +343,10 @@ footer a{display:block;margin:6px 0}
       <div class="label">Standardutveckling · AI & rörlig bild</div>
       <h1>Rättigheter som följer människan.</h1>
       <p class="lead">En föreslagen svensk/EU-anpassad verifieringsmodell för digitala repliker: verifiera människan före casting och verifiera rättighetskedjan före leverans.</p>
-      <p class="deck">AI Twin Rights arbetar med två kontrollpunkter: ett AI Twin Credential som visar att människan bakom den digitala replikan är verifierad före casting, och Production Verified som kontrollerar att en specifik leveransversion har dokumenterad rättighetskedja för deklarerade AI Twins. Själva produktionsavtalet sluts mellan producent och performer.</p>
+      <p class="deck">AI Twin Rights arbetar med två kontrollpunkter: ett AI Twin Credential som visar att människan bakom den digitala replikan är verifierad före casting, och Production Verified som kontrollerar en specifik leveransversion. Mellan dessa ligger producentens och performerns avtal med en AI Twin Integrity Boundary: en uttrycklig gräns för vad som får skapas, förändras, återanvändas och publiceras.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#standard">Läs om standardförslaget →</a>
-        <a class="btn" href="certifieringspilot.html">Testa pilot v6 · Legal & Standards Review</a>
+        <a class="btn" href="certifieringspilot.html">Testa pilot v7 · Integrity Boundary</a>
       </div>
     </div>
 
@@ -369,7 +369,7 @@ footer a{display:block;margin:6px 0}
         <a href="#process">12 steg från credential till Production Verified</a>
         <a href="#regelverk">Lagar och referensram</a>
         <a href="#bransch">Aktörer i branschen</a>
-        <a href="certifieringspilot.html">Testa pilot v6 · Legal & Standards Review</a>
+        <a href="certifieringspilot.html">Testa pilot v7 · Integrity Boundary</a>
         <a href="#pilot">Utvecklingsplan</a>
       </div>
     </div>
@@ -380,7 +380,7 @@ footer a{display:block;margin:6px 0}
       <div class="side-label">01 · Så fungerar det</div>
       <div class="section-main">
         <h2>Två kontrollpunkter. En sammanhängande rättighetskedja.</h2>
-        <p class="intro">Först verifieras människan och hennes AI Twin Credential före casting. När en producent väljer personen sluts ett separat produktionsavtal mellan producent och performer. Inför leverans granskas credential, avtalsbevis, scope, tidskoder och den specifika masterversionen innan Production Verified kan utfärdas.</p>
+        <p class="intro">Först verifieras människan och hennes AI Twin Credential före casting. När en producent väljer personen sluts ett separat produktionsavtal mellan producent och performer. Avtalet definierar AI Twin Integrity Boundary. Inför leverans granskas credential, avtalsbevis, Integrity Boundary, tidskoder och den specifika masterversionen innan Production Verified kan utfärdas.</p>
 
         <div class="chain-logic">
           <span>PASS 1 · CREDENTIAL & CASTING</span>
@@ -407,13 +407,13 @@ footer a{display:block;margin:6px 0}
 
           <div class="step"><div class="topline"><div class="n">7</div><div class="phase">Förfrågan</div></div><h3>Producenten skickar Production Use Request</h3><p>Producenten beskriver exakt produktion, scen, ändamål, medier, territorium, tidsperiod, ersättning, leverantör och vilken AI/VFX-användning som önskas.</p><div class="proof">Output: specifik nyttjandeförfrågan</div></div>
 
-          <div class="step"><div class="topline"><div class="n">8</div><div class="phase">Rights Matrix</div></div><h3>Skådespelaren väljer JA eller NEJ punkt för punkt</h3><p>Ansikte, kropp, röst, syntetisk dialog, rörelser, dubbning, åldersförändring, modellträning, trailer, reklam, återanvändning, ny säsong och tredje part kan godkännas eller nekas separat.</p><div class="proof">Ej uttryckligen godkänt = utanför scope</div></div>
+          <div class="step"><div class="topline"><div class="n">8</div><div class="phase">Integrity Boundary</div></div><h3>Performern sätter gränsen för vad AI:n får skapa</h3><p>Rights Matrix kombineras med en AI Twin Integrity Boundary: ansikte, kropp, röst, syntetisk dialog, känsliga sammanhang, remake/reuse, reklam, modellträning och eventuellt preview/slutgodkännande definieras uttryckligen.</p><div class="proof">Ej uttryckligen godkänt = utanför gränsen</div></div>
 
           <div class="step"><div class="topline"><div class="n">9</div><div class="phase">Avtal</div></div><h3>Producent och skådespelare signerar produktionsavtalet</h3><p>Ett vanligt skriftligt eller e-signerat avtal kan användas för just denna produktion, med exakt omfattning, ersättning och rättighetsmatris. Dokumentversion och hash kan låsas för spårbarhet.</p><div class="proof">Normalfallet kräver inte ny notariell förrättning</div></div>
 
           <div class="step"><div class="topline"><div class="n">10</div><div class="phase">Evidence</div></div><h3>Producenten registrerar review-paketet</h3><p>Credential ID, signerat avtalsunderlag, Rights Matrix/scope, scen eller timecode och den faktiska AI-användningen kopplas till en identifierad masterversion.</p><div class="proof">Output: versionsbundet evidence package</div></div>
 
-          <div class="step"><div class="topline"><div class="n">11</div><div class="phase">Production Review</div></div><h3>AI Twin Rights jämför scope med faktisk användning</h3><p>Credential, avtalsbevis, deklarerad Rights Matrix, scen/timecode och faktisk AI-användning granskas mot den aktuella masterversionen. Master och evidence package kan versionsbindas med SHA-256.</p><div class="proof deny">Mismatch eller saknat bevis → ACTION REQUIRED</div></div>
+          <div class="step"><div class="topline"><div class="n">11</div><div class="phase">Production Review</div></div><h3>AI Twin Rights jämför resultatet med människans godkända gräns</h3><p>Credential, avtalsbevis, Rights Matrix, Integrity Boundary, scen/timecode och faktisk AI-användning granskas mot den aktuella masterversionen. Om remake, ny dialog, ändrad kontext eller annan användning ligger utanför gränsen blir status NEW APPROVAL REQUIRED.</p><div class="proof deny">Utanför gränsen → NEW APPROVAL REQUIRED</div></div>
 
           <div class="step"><div class="topline"><div class="n">12</div><div class="phase">Production Verified</div></div><h3>Den granskade masterversionen får verifieringsstatus</h3><p>När kriterierna är uppfyllda kan AI Twin Rights utfärda ett versionsbundet Production Verified-uttalande. Ändrad master eller ny AI-användning kräver ny review.</p><div class="proof">Slutpunkt: Production Verified · Human Consent Certified</div></div>
         </div>
@@ -426,7 +426,7 @@ footer a{display:block;margin:6px 0}
           <a class="btn primary" href="certifieringspilot.html">Testa produktionsflödet i certifieringspiloten →</a>
           <a class="btn" href="#standard">Se skillnaden mellan Credential, avtal och Production Verified</a>
         </div>
-        <p class="chain-foot">Pilotstatus: Credential, notariell verifieringsprocess, avtalsmallar och Production Verified är en föreslagen privat verifieringsmodell. Den är inte myndighetsgodkänd, SIS-certifierad eller ackrediterad och behöver valideras juridiskt, tekniskt och operativt innan skarp drift.</p>
+        <p class="chain-foot">Pilotstatus: Credential, AI Twin Integrity Boundary, NEW APPROVAL REQUIRED och Production Verified är delar av en föreslagen privat verifieringsmodell. Integrity Boundary och New Approval Required är egna scheme-begrepp - inte lagtermer eller fastställda SIS-standarder. Modellen behöver juridisk, teknisk och operativ validering innan skarp drift.</p>
       </div>
     </div>
   </section>
@@ -436,7 +436,7 @@ footer a{display:block;margin:6px 0}
       <div class="side-label">02 · Standardförslaget</div>
       <div class="section-main">
         <h2>Credential, produktionsavtal och Production Verified har tre olika roller.</h2>
-        <p class="intro">AI Twin Credential visar vem personen är och att den digitala representationen är verifierad före casting. Production Use Agreement reglerar vad producenten får göra. Production Verified kontrollerar i efterhand att dokumenterad scope matchar den deklarerade användningen i en bestämd masterversion.</p>
+        <p class="intro">AI Twin Credential visar vem personen är och att den digitala representationen är verifierad före casting. Production Use Agreement definierar Rights Matrix och AI Twin Integrity Boundary. Production Verified kontrollerar att den faktiska deklarerade användningen i en bestämd masterversion fortfarande ligger inom den godkända gränsen.</p>
 
         <div class="rulelist">
           <div class="ruleitem">
@@ -455,6 +455,14 @@ footer a{display:block;margin:6px 0}
             <div class="code">ATR 04</div>
             <div><h3>Versionsbunden kontroll</h3><p>Granskningsbeslutet knyts till den faktiska materialversion som har kontrollerats. Ändringar kan kräva ny prövning.</p></div>
           </div>
+          <div class="ruleitem">
+            <div class="code">ATR 05</div>
+            <div><h3>AI Twin Integrity Boundary</h3><p>Varje produktionsavtal ska definiera vad performerns digitala representation får användas till och vilka syntetiska resultat, sammanhang och återanvändningar som ligger utanför gränsen. Begreppet är ett privat AI Twin Rights scheme-krav - inte en lagterm eller fastställd SIS-standard.</p></div>
+          </div>
+          <div class="ruleitem">
+            <div class="code">ATR 06</div>
+            <div><h3>New Approval Required</h3><p>Remake, reboot, spinoff, ny säsong, återskapad scen eller annan ändrad användning kräver nytt uttryckligt godkännande när den inte redan omfattas av signerad Integrity Boundary. Tidigare godkänd scen följer inte automatiskt med till en ny produktion.</p></div>
+          </div>
         </div>
 
         <div class="standard-panel">
@@ -466,7 +474,7 @@ footer a{display:block;margin:6px 0}
           <div>
             <small>Production Verified</small>
             <h3>Matchar användningen avtalet?</h3>
-            <p>Utfärdas först efter review av den specificerade masterversionens deklarerade AI-användning mot Credential, signerat avtalsbevis och registrerad scope. Det ersätter inte producentens avtal.</p>
+            <p>Utfärdas först efter review av den specificerade masterversionens deklarerade AI-användning mot Credential, signerat avtalsbevis, Rights Matrix och AI Twin Integrity Boundary. Olöst NEW APPROVAL REQUIRED blockerar verifieringen.</p>
           </div>
 
 
@@ -474,7 +482,9 @@ footer a{display:block;margin:6px 0}
         <strong>1. Registry Declaration:</strong> ”Jag vill vara verifierad och sökbar för AI-roller hos castingaktör X.”<br>
         <strong>2. Production Use Agreement:</strong> ”Jag godkänner exakt denna användning i produktion Y, enligt den här rättighetsmatrisen.”<br>
         <strong>3. Production Verified:</strong> AI Twin Rights verifierar att den inlämnade rättighetskedjan matchar den deklarerade användningen i den angivna masterversionen.<br><br>
-        Credential öppnar dörren för tryggare casting. Avtalet öppnar dörren för användning. Production Verified skapar en kontrollerbar leveranspunkt.</div>        </div>
+        <strong>Integrity Boundary:</strong> Avtalet ska beskriva inte bara vilka tekniska tillgångar som får användas, utan också vilket syntetiskt resultat performern faktiskt har godkänt. Om användningen ändras får den status <strong>NEW APPROVAL REQUIRED</strong> tills ett nytt uttryckligt godkännande har versionsbundits.<br><br>
+        <strong>Remake-regel:</strong> En tidigare godkänd scen kan användas som referens, men godkännandet överförs inte automatiskt till en remake eller annan ny produktion. Undantag kräver uttrycklig remake/reuse-rätt inom samma definierade Integrity Boundary.<br><br>
+        Credential öppnar dörren för tryggare casting. Avtalet sätter människans gräns. Production Verified kontrollerar att resultatet håller sig inom den.</div>        </div>
       </div>
     </div>
   </section>
